@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Login</title>
+	<script type="text/javascript">
+	function checkuser(){
+		var i = document.forms["login"]["user"].value;
+		var j = document.forms["login"]["pass"].value;
+		if ((i == null && j == null) || (i == "" && j == ""))  {
+			alert(" empty");
+			return false;
+		}
+		else if (i== null || i == "") {
+			alert("user name cannot be  empty!!!");
+			return false;
+		}
+		else if ( j == null || j == ""){
+			alert("password is empty !!");
+			return false;
+		}
+
+	}
+   </script>
+</head>
+
+	<body>
+	<h1>login form</h1>
+	<form name="login" method="post" action="" onsubmit="return checkuser()">
+		<table>
+		<tr>
+			<td colspan="1">User name</td>
+			<td colspan="1"><input type="text" name="user"/></td>
+		</tr>
+		<tr>
+			<td colspan="1">password </td>
+			<td colspan="1"><input type="password" name="pass" ></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="submit"></td>
+			<td><input type="submit" value="reset"></td>
+		</tr>
+		</td>
+		</table>	
+		</form>
+	</body>
+</html>
